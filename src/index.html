@@ -1,0 +1,217 @@
+<div class="container">
+  <div id="head">
+    <img alt="Runescape" src="https://i.imgur.com/fmQlsmA.gif" />
+    <p>There are currently 0 people jeeting!</p>
+  </div>
+  <div id="article">
+    <!-- Split main article into two columns -->
+    <div id="left-col">
+      <fieldset id="rs">
+        <legend>Create Wallet</legend>
+        <ul id="rs-options">
+          <li>
+            Download Phantom or your wallet of choice from the App store or Google Play store for free. Desktop users, download the Google Chrome Extension by
+            going to phantom.app.
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset id="kb">
+        <legend>Buy Sol</legend>
+        <ul id="kb-options">
+          <li>
+            Have SOL in your wallet to switch to $GP. If you don’t have SOL, you can buy directly on Phantom, transfer from another wallet, or buy on another
+            exchange and send it to your wallet.
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset id="lp">
+        <legend>Go to Raydium</legend>
+        <ul id="lp-options">
+          <li>
+            Connect to Raydium. Go to raydium.io/swap on your browser in your Phantom app. Connect your wallet. Paste the $GP token address into Raydium, select
+            $GP, and confirm. When Phantom prompts you for a wallet signature, sign.
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset id="wf">
+        <legend>Swap for $GP</legend>
+        <ul id="wf-options">
+          <li>
+            Swap SOL for $GP. We have ZERO taxes so you don’t need to worry about buying with a specific slippage, although you may need to use slippage during
+            times of market volatility.
+          </li>
+        </ul>
+      </fieldset>
+      <img id="jagex" alt="Jagex" src="https://archive.is/g5jlC/d1ced0a9ddad1ce2fe9a4466e35e3c144f0ed693.gif" />
+    </div>
+
+    <!-- Right Column of the Article grid -->
+    <div id="right-col">
+      <a href="https://t.me/osrsgoldcoins"
+        ><img alt="Telegram" class="login" src="https://uploads-ssl.webflow.com/660f84065946f20ec8c857c8/660f926ed724dd955234fe30_telegram.png"
+      /></a>
+      <a href="https://twitter.com/osrsgoldsolana"
+        ><img alt="Twitter" class="login" src="https://uploads-ssl.webflow.com/660f84065946f20ec8c857c8/660f926e81b7509fbc008336_twitter.png"
+      /></a>
+      <a href="https://www.dextools.io/app/en/solana/pair-explorer/8gjHdfuAZQeYjXmzwNY57edFSEq5vpRtp1mDqQK2wV5A?t=1712298705429"
+        ><img alt="Dextools" class="login" src="https://uploads-ssl.webflow.com/660f84065946f20ec8c857c8/660f926f4685705303cfe512_dextools.png"
+      /></a>
+      <a href="https://dexscreener.com/solana/8gjhdfuazqeyjxmzwny57edfseq5vprtp1mdqqk2wv5a"
+        ><img alt="Dexscreener" class="login" src="https://uploads-ssl.webflow.com/660f84065946f20ec8c857c8/660f926edb21ea9df7b3b016_dexscreener.png"
+      /></a>
+
+      <!-- Building the RECENT NEWS scroll -->
+      <img id="top-scroll" src="https://archive.is/g5jlC/2299c15516b50df9d74dd0806957a450aa34301a.gif" />
+      <!-- Top of scroll-->
+      <div id="scroll">
+        <img id="recent-news" src="https://archive.is/g5jlC/464b28aa6005631227720f059cd28bfc8220a200.gif" />
+        <div id="ew2block" class="news">
+          <b id="ew2">$GP - Runescape Gold, Older Than Bitcoin</b>
+          <span id="ew2d8">05-Apr-2024<img id="ew2img" alt="crane" src="https://archive.is/g5jlC/2666cbed53fe5e6cfb37407eed7a649b0108b7a6.gif" /></span>
+          <p id="ew2news">
+            Your golden ticket to unimaginable riches and the legendary status of not just conquering Solana, but also life's grandest exchange: buying gf. $GP
+            is guaranteed to turn your wallet from a dusty bag of runes into a treasure trove that even Zezima would envy. With $GP, you're not just rich in the
+            game, you're rich where you don't have friends too.
+          </p>
+        </div>
+        <br />
+        <div id="btsblock" class="news">
+          <b id="bts">CA: 8i2vqp1UnQVQNe18TgoJRkREUvLG5ujGBF9oJraL4JzG</b>
+
+          <!-- Bottom of scroll -->
+        </div>
+      </div>
+    </div>
+    &nbsp;
+    <footer>
+      <p>This webpage and its contents are copyright 1999 - 2006 Jagex Ltd.</p>
+      <p>To use our service you must agree to be a diamond handed degen.</p>
+      &nbsp;
+    </footer>
+  </div>
+  <div class="game-container" ng-app="duellingApp" ng-controller="GameController">
+    <span id="loader" class="loader fader"></span>
+    <div class="arena-wrapper">
+      <h1>
+        <a href="https://oldschool.runescape.com/" target="_blank" title="Click to play the official Oldschool Runescape game">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/209305/runescape_logo.png" alt="RuneScape logo" />
+        </a>
+      </h1>
+
+      <div class="arena">
+        <div class="player">
+          <h2><span>{{player1.name}}</span></h2>
+          <div id="P1Dmg" class="health-display">{{p1Damage}}</div>
+          <div class="damage-meter" ng-if="player1.total_damage > 0 || player1.has_eaten">
+            <div id="Player1" class="damage-total"></div>
+          </div>
+          <div class="player-splat">
+            <div class="splat">
+              <span class="damage">{{player1.damage_taken}}</span>
+              <img ng-if="player1.damage_taken === 0" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/209305/miss.png" />
+              <img ng-if="player1.damage_taken" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/209305/hit.png" />
+            </div>
+          </div>
+          <img class="player-image" ng-src="{{player1.image}}" />
+
+          <div class="inventory">
+            <button class="item" ng-repeat="item in player1.inventory" ng-click="eatFoodPlayerOne($index)">
+              <img src="{{item.img}}" alt="{{item.name}}" />
+            </button>
+          </div>
+
+          <div class="arrow" ng-show="foodEnabled && !player1.has_eaten && player1.total_damage > 70">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/209305/player_arrow.png" alt="" />
+            EAT
+          </div>
+        </div>
+
+        <div class="player">
+          <h2><span>{{player2.name}}</span></h2>
+          <div id="P2Dmg" class="health-display inverted">{{p2Damage}}</div>
+          <div ng-if="player2.total_damage > 0" class="damage-meter">
+            <div id="Player2" class="damage-total"></div>
+          </div>
+          <div class="player-splat">
+            <div class="splat">
+              <span class="damage">{{player2.damage_taken}}</span>
+              <img ng-if="player2.damage_taken === 0" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/209305/miss.png" />
+              <img ng-if="player2.damage_taken" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/209305/hit.png" />
+            </div>
+          </div>
+          <img class="player-image" ng-src="{{player2.image}}" />
+
+          <div class="inventory">
+            <button class="item" ng-repeat="item in player2.inventory" disabled="disabled">
+              <img src="{{item.img}}" alt="{{item.name}}" />
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="fight-area"
+          ng-class="{
+ 'pointable': !winner &&
+  countDown === 'Fight!' }"
+        >
+          <span class="fight-message">
+            <div ng-show="!fighting && !countDown">
+              <h2>Options</h2>
+              <div class="check-box">
+                <span>Food</span>
+                <input id="food" type="checkbox" ng-model="foodEnabled" ng-change="updateInventory()" />
+                <label for="food"></label>
+              </div>
+              <div class="check-box">
+                <span>Boxing</span>
+                <input id="boxing" type="checkbox" ng-model="boxing" ng-change="updateFight()" />
+                <label for="boxing"></label>
+              </div>
+              <button ng-click="startFight()">Begin Fight</button>
+            </div>
+            <h2 ng-show="!countDown && fighting">Ready</h2>
+            <h2 ng-show="!winner">{{countDown}}</h2>
+            <div ng-show="winner">
+              <h2>
+                <span ng-if="winner === 'tie'"> It's a Tie! </span>
+                <span ng-if="winner != 'tie'">
+                  Winner:<br />
+                  {{winner}}
+                </span>
+              </h2>
+              <button ng-click="restart()">Rematch {{player2.name}}</button>
+              <button ng-show="dontShow" ng-click="restart()">New Opponent</button>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <footer class="disclaimer">
+        All images are owned by
+        <a href="https://www.jagex.com/" target="_blank">Jagex Ltd</a>. I am in no way afilliated with Jagex or RuneScape.
+        <a href="//andrews.codes/" target="_blank">I am just a fan</a>.
+      </footer>
+    </div>
+
+    <div
+      class="patience"
+      ng-class="{
+'pointable': !winner && countDown === 'Fight!' }"
+    ></div>
+  </div>
+</div>
+
+<iframe
+  class="sea-shanty"
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/wl-HPIu5kcs?si=6g3_-9t582mToIw0&autoplay=1"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
